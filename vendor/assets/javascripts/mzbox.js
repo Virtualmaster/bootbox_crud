@@ -192,7 +192,7 @@
     let $this   = this;
     let onDone  = null;
 
-    let modal = this.element = $('<div class="modal"></div>').appendTo(document.body);
+    let modal = this.element = $('<div class="modal modal-fixed-footer"></div>').appendTo(document.body);
     if(options.attrs){
       for(let attr in options.attrs){
         if(attr === 'class')
