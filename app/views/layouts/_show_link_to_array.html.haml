@@ -1,5 +1,5 @@
 .col.s6.right-align
   .label= label.to_s
-- objects.each do |o|
-  .col.s6
+.col.s6
+  - objects.each do |o|
     = link_to o.send(field), o
