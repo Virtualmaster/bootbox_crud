@@ -194,10 +194,10 @@ BBCrud.Models = (function () {
 
                 return {
                     new: function (data) {
-                        BBCrud.Modals.create('Create ' + titleName, baseUrl, data.exec, data);
+                        BBCrud.Modals.create('Create ' + titleName, baseUrl, eval(data.exec), data);
                     },
                     edit: function (data) {
-                        BBCrud.Modals.update(data.id, 'Edit ' + titleName, baseUrl, data.exec, false, undefined, undefined, data);
+                        BBCrud.Modals.update(data.id, 'Edit ' + titleName, baseUrl, eval(data.exec), false, undefined, undefined, data);
                     },
                     show: function (data) {
                         BBCrud.Modals.show(data.id, titleName.charAt(0).toUpperCase() + titleName.slice(1) + ' detail', baseUrl, data);
