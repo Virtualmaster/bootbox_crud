@@ -107,6 +107,7 @@ BBCrud.Modals = (function () {
             if (typeof id === 'object') id = id.id;
             var primaryBtnLabel = createMode ? 'Create' : 'Update';
             var url = createMode ? baseUrl + 'new' : baseUrl + id + '/edit';
+            if ((data.timeoutExec == undefined) && (data.onsubmit != undefined)) {timeoutExec = eval("(" + data.onsubmit + ")")};
             modals.form(id, title, primaryBtnLabel, url, exec, timeout, timeoutExec, { baseUrl: baseUrl, data: data });
         },
         other: function (id, title, baseUrl, actionName, exec, timeout, timeoutExec, data) {
