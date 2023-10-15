@@ -89,7 +89,7 @@ BBCrud.Modals = (function () {
                 $(modal.element.find('.modal-content > p')).html(content);
                 $(modal.element.find('.form-actions')).hide();
                 if (onLoad !== null && typeof onLoad !== 'undefined') { onLoad(); }
-                M.FormSelect.init($('select'), {
+                M.FormSelect.init($('select:not(.no-materialize)'), {
                   dropdownOptions: {
                     container: document.body
                   }
